@@ -1,0 +1,6 @@
+pandas
+scikit-learn
+mlflow
+flask
+waitress
+prometheus-flask-exporter
