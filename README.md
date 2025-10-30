@@ -88,10 +88,10 @@ This project is designed to be fully reproducible. The model training happens *i
 
 ```bash
 # Build the image. The --no-cache flag is important to ensure training always runs.
-docker build --no-cache -t ravijpatel/sentiment-analysis .
+docker build --no-cache -t your-docker-username/sentiment-analysis .
 
 # Run the container
-docker run -p 8080:8080 ravijpatel/sentiment-analysis
+docker run -p 8080:8080 your-docker-username/sentiment-analysis
 ```
 
 Your application should now be running\! Open your web browser and go to **`http://localhost:8080`** to see it.
