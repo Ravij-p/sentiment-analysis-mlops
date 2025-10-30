@@ -60,7 +60,7 @@ Make sure you have the following installed:
 Clone this project to your local machine.
 
 ```bash
-git clone https://github.com/ravijpatel/sentiment-analysis-mlops.git
+git clone https://github.com/Ravij-p/sentiment-analysis-mlops.git
 cd sentiment-analysis-mlops
 ```
 
