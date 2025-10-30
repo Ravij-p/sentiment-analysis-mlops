@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sentiment-app-deployment
+spec:
+  replicas: 2 # Run 2 pods for high availability
+  selector:
+    matchLabels:
+      app: sentiment-app
+  template:
+    metadata:
+      labels:
+        app: sentiment-app
+      annotations:
+        prometheus.io/scrape: 'true' # Tell Prometheus to scrape this
+        prometheus.io/port: '8080'   # on this port
+    spec:
+      containers:
+      - name: sentiment-analysis-container
+        image: ravijpatel/sentiment-analysis:latest # The image we pushed
+        ports:
+        - containerPort: 8080
