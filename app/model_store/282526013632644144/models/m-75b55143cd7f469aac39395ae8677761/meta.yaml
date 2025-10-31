@@ -1,0 +1,10 @@
+artifact_location: file:///C:/Desktop/sentiment-analysis-mlops/app/model_store/282526013632644144/models/m-75b55143cd7f469aac39395ae8677761/artifacts
+creation_timestamp: 1761886073292
+experiment_id: '282526013632644144'
+last_updated_timestamp: 1761886079241
+model_id: m-75b55143cd7f469aac39395ae8677761
+model_type: null
+name: model
+source_run_id: d4e97f672394444fa61b1f2c97cb9cfb
+status: 2
+status_message: null

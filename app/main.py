@@ -3,7 +3,7 @@ from flask import request, render_template_string
 import mlflow
 from prometheus_flask_exporter import PrometheusMetrics
 
-# The URI must be an absolute path to the location created during the Docker build
+
 MLFLOW_TRACKING_URI = "/app/model_store"
 mlflow.set_tracking_uri(f"file:{MLFLOW_TRACKING_URI}")
 
@@ -28,7 +28,7 @@ def find_latest_model_uri():
     model_uri = f"runs:/{run_id}/model"
     return model_uri
 
-# --- Application Startup ---
+
 print("Starting application...", flush=True)
 model_uri = find_latest_model_uri()
 model = mlflow.pyfunc.load_model(model_uri)
@@ -44,11 +44,11 @@ HTML_TEMPLATE = """
     <meta charset="UTF-8">
     <title>Sentiment Analysis</title>
     <style>
-        body { font-family: sans-serif; background-color: #f4f4f4; text-align: center; }
+        body { font-family: sans-serif; background-color: 
         .container { max-width: 500px; margin: 50px auto; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        textarea { width: 95%; padding: 10px; margin-bottom: 10px; border-radius: 4px; border: 1px solid #ddd; }
-        input[type="submit"] { background-color: #007bff; color: white; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer; }
-        h2 { color: #333; }
+        textarea { width: 95%; padding: 10px; margin-bottom: 10px; border-radius: 4px; border: 1px solid 
+        input[type="submit"] { background-color: 
+        h2 { color: 
         .result { margin-top: 20px; font-size: 1.2em; }
         .positive { color: green; }
         .negative { color: red; }

@@ -5,8 +5,8 @@ metadata:
 spec:
   selector:
     app: sentiment-app
-  type: NodePort # Exposes the service on each Node's IP at a static port
+  type: NodePort 
   ports:
     - protocol: TCP
-      port: 8080       # Port on the service
-      targetPort: 8080 # Port on the pod
+      port: 8080       
+      targetPort: 8080 

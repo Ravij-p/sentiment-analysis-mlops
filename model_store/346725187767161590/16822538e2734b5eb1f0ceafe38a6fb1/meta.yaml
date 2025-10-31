@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Desktop/sentiment-analysis-mlops/model_store/346725187767161590/16822538e2734b5eb1f0ceafe38a6fb1/artifacts
+end_time: 1761846343471
+entry_point_name: ''
+experiment_id: '346725187767161590'
+lifecycle_stage: active
+run_id: 16822538e2734b5eb1f0ceafe38a6fb1
+run_name: valuable-lark-192
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1761846287425
+status: 3
+tags: []
+user_id: ravij

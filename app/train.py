@@ -8,16 +8,19 @@ import mlflow
 import mlflow.sklearn
 import os
 
-# Paths are now relative to the /app directory inside the container
-DATA_PATH = "data/reviews.csv"
-MLFLOW_TRACKING_URI = "model_store" # No leading 'app/'
 
-# Set tracking URI to a simple subdirectory name
-mlflow.set_tracking_uri(f"file:{MLFLOW_TRACKING_URI}")
+DATA_PATH = "data/reviews.csv"
+MODEL_STORE_PATH = "app/model_store"
+EXPERIMENT_NAME = "Sentiment Analysis"
+
+
+mlflow.set_tracking_uri(f"file:{MODEL_STORE_PATH}")
 
 def train_model():
-    print(f"MLflow tracking URI set to: {mlflow.get_tracking_uri()}")
-    mlflow.set_experiment("Sentiment Analysis")
+    
+    
+    mlflow.set_experiment(EXPERIMENT_NAME)
+    
 
     with mlflow.start_run() as run:
         print(f"MLflow Run ID: {run.info.run_id}")
@@ -26,6 +29,7 @@ def train_model():
         df = df.dropna()
         df['sentiment'] = df['sentiment'].apply(lambda x: 1 if x == 'positive' else 0)
         X, y = df['review'], df['sentiment']
+        
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
         pipeline = Pipeline([
@@ -41,7 +45,7 @@ def train_model():
         mlflow.log_metric("accuracy", accuracy)
         mlflow.sklearn.log_model(pipeline, "model")
 
-        print("Model trained and logged successfully inside the container.")
+        print(f"Model trained and logged successfully to the '{EXPERIMENT_NAME}' experiment.")
 
 if __name__ == "__main__":
     train_model()

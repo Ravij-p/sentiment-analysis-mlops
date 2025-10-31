@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Desktop/sentiment-analysis-mlops/app/model_store/282526013632644144/d4e97f672394444fa61b1f2c97cb9cfb/artifacts
+end_time: 1761886079263
+entry_point_name: ''
+experiment_id: '282526013632644144'
+lifecycle_stage: active
+run_id: d4e97f672394444fa61b1f2c97cb9cfb
+run_name: bold-bat-762
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1761886063885
+status: 3
+tags: []
+user_id: ravij
